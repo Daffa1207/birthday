@@ -129,7 +129,7 @@
         .bar { background: #222; height: 100%; margin-right: 2px; }
         .bar.w1 { width: 1px; } .bar.w2 { width: 3px; } .bar.w3 { width: 2px; } .bar.w4 { width: 4px; }
 
-        /* Bagian Sobekan Kanan Karcis */
+        /* Bagian Sobekan Kanan Voucher */
         .ticket-stub {
             width: 60px;
             border-left: 2px dashed var(--primary-pink);
@@ -149,7 +149,7 @@
         }
         
         /* Mini Voucher & Summary Box */
-        .voucher-mini { background: #ffe4e9; border: 1px dashed var(--primary-pink); border-radius: 8px; padding: 15px; display: flex; align-items: center; margin-bottom: 10px; text-align: left; opacity: 0.8; max-width: 380px; margin-left: auto; margin-right: auto;}
+        .voucher-mini { background: #ffe4e9; border: 1px dashed var(--primary-pink); border-radius: 8px; padding: 15px; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px; text-align: center; opacity: 0.8; max-width: 380px; margin-left: auto; margin-right: auto;}
         .summary-box { background: var(--white); border-radius: 10px; padding: 15px; margin-bottom: 20px; text-align: left; max-width: 400px; margin-left: auto; margin-right: auto;}
         .summary-title { font-size: 0.85rem; font-weight: bold; color: var(--text-gray); margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;}
         .summary-list { list-style: none; }
@@ -167,13 +167,13 @@
     <div id="screen-start" class="screen active">
         <h1 class="cursive">Happy<br>Birthday<br>dd ❤️</h1>
         <div class="polaroid">
-            <img src="https://via.placeholder.com/300x250/ffc4d3/ffffff?text=Foto+Kalian" alt="Foto Couple">
+            <img src="foto-kita.jpg" alt="Foto Couple">
         </div>
-        <p>Hari ini spesial karena seseorang yang aku sayang lahir ke dunia 🥳</p>
+        <p>welcome to your 20s. thank you for being part of my life and for all the memories we've made so far. i hope this year treats you kindly, brings you closer to everything you've been working for, and gives you plenty of reasons to smile.proud of you, always. enjoy your day, my wifee 🌷</p>
         <div style="background: rgba(255,255,255,0.7); padding: 15px; border-radius: 10px; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto;">
             <p style="margin: 0;">Ada 5 hadiah yang tersembunyi. Tapi buat dapetin semuanya, dd harus lulus kuis duluu 👑.</p>
         </div>
-        <button class="btn" onclick="goToScreen('screen-rules')">Mulai Petualangan ❤️</button>
+        <button class="btn" onclick="goToScreen('screen-rules')">start the challenge</button>
     </div>
 
     <div id="screen-rules" class="screen">
@@ -181,15 +181,15 @@
         
         <div style="background: var(--white); padding: 20px; border-radius: 10px; text-align: left; margin-bottom: 30px; max-width: 400px; margin-left: auto; margin-right: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
             <ul style="font-size: 0.9rem; color: var(--text-gray); padding-left: 20px; line-height: 1.8;">
-                <li>Ada <b>5 pertanyaan</b> tentang memori kita berdua.</li>
+                <li>Ada <b>5 pertanyaan</b> About our memories together.</li>
                 <li>Waktu menjawab cuma <b>30 detik</b> per soal. Jangan kelamaan mikir! ⏱️</li>
-                <li>Jawab <b>benar</b> = Dapet voucher spesial berbentuk tiket konser.</li>
-                <li>Jawab <b>salah</b> atau <b>waktu habis</b> = Voucher hangus selamanya 😭.</li>
+                <li>Jawab <b>benar</b> = Dapet voucher spesial.</li>
+                <li>Jawab <b>salah</b> atau <b>waktu habis</b> = Voucher hangus.</li>
                 <li>Dilarang keras <i>scroll</i> riwayat chat pas lagi kuis! (Kejujuran nomor 1 😆)</li>
             </ul>
         </div>
 
-        <button class="btn" onclick="startQuiz()">Paham, Gas Mulai! 🚀</button>
+        <button class="btn" onclick="startQuiz()">Enter the challenge 🚀</button>
     </div>
 
     <div id="screen-quiz" class="screen">
@@ -211,8 +211,9 @@
         <p style="color: var(--green); font-weight: bold; margin-bottom: 10px;">Voucher berhasil dibuka!</p>
 
         <div class="voucher-mini" style="max-width:340px;">
-            <span style="font-size: 1.5rem; margin-right: 15px;">🎟️</span>
+            <span style="font-size: 1.5rem;">🎟️</span>
             <span id="correct-voucher-title" class="cursive" style="color: var(--primary-pink); font-size: 1.5rem;">Judul</span>
+            <span style="font-size: 1.5rem;">🎟️</span>
         </div>
 
         <button class="btn" onclick="goToScreen('screen-voucher-detail')">Lihat Voucher ➔</button>
@@ -227,8 +228,9 @@
             <p style="font-size: 0.8rem; font-weight: bold; color: var(--text-gray); margin-bottom: 5px;">Voucher yang kelewatan:</p>
             
             <div class="voucher-mini">
-                <span id="wrong-voucher-icon" style="font-size: 1.5rem; margin-right: 15px;">🎟️</span>
+                <span id="wrong-voucher-icon" style="font-size: 1.5rem;">🎟️</span>
                 <span id="wrong-voucher-title" style="font-weight: bold; color: var(--primary-pink); font-size: 1rem;">Judul Voucher</span>
+                <span style="font-size: 1.5rem;">🎟️</span>
             </div>
             
             <p style="font-size: 0.85rem; font-style: italic; text-align: center; margin-top: 10px;">"Sayang banget padahal lumayan tuh 🥲"</p>
@@ -264,12 +266,12 @@
             </div>
         </div>
 
-        <button class="btn" onclick="downloadVoucher()">📥 Simpan Voucher Karcis</button>
+        <button class="btn" onclick="downloadVoucher()">📥 Simpan Voucher</button>
         <button class="btn btn-outline" onclick="nextQuestion()">Lanjut ke Pertanyaan Berikutnya</button>
     </div>
 
     <div id="screen-final" class="screen">
-        <h1 class="cursive">Hasil Petualangan dd ❤️</h1>
+        <h1 class="cursive">Hasil Challenge dd ❤️</h1>
         
         <div class="summary-box">
             <div class="summary-title">Voucher Didapat (<span id="score-won">0</span>/5)</div>
@@ -282,7 +284,7 @@
         </div>
 
         <div style="background: var(--light-pink); padding: 15px; border-radius: 10px; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto;">
-            <p style="margin: 0; font-weight: 500; color: var(--primary-pink);">Udah selesai nih kuisnya! Kasih tau mas ya dapet berapa karcis aja hihi 💌</p>
+            <p style="margin: 0; font-weight: 500; color: var(--primary-pink);">Udah selesai nih challengenya! Kasih tau mas ya dapet berapa voucher aja hihi 💌</p>
         </div>
     </div>
 
@@ -295,50 +297,51 @@
             question: "Kapan kita pertama kali chat an??",
             options: ["25 Agustus 2024", "27 Agustus 2024", "29 Agustus 2024", "1 September 2024"],
             answer: "27 Agustus 2024",
-            wrongMsg: "Yah salah 😔 Padahal ini awal dari semua cerita kita dimulai.",
-            voucherTitle: "FOOD FREEDOM PASS 🎟️",
+            wrongMsg: "Yah salah Padahal ini awal dari semua cerita kita dimulai.",
+            voucherTitle: "FOOD FREEDOM PASS",
             benefit: "dd bebas milih mau makan apa.",
             terms: [
                 "Berlaku 1x.",
                 "Menyesuaikan jadwal mas dan dd.",
-                "Jangan tiba-tiba milih makan di negara lain.",
-                "Kalo lagi tanggal tua banget, boleh dijadwal ulang 😭"
+                "pleasee makanan nyaa harus masuk akall yahh hehehe",
+                "Kalo lagi noo moneeyy, boleh dijadwal ulang 😭",
             ]
         },
         {
             question: "Siapa dan kapan pertama kali manggil aku kamu??",
             options: ["mas, 1 September 2024", "dd, 2 September 2024", "dd, 3 September 2024", "mas, 3 September 2024"],
             answer: "dd, 3 September 2024",
-            wrongMsg: "Woiii kok bisa salah 😭 Yang satu ini lumayan bersejarah loh.",
-            voucherTitle: "RELAXATION ACCESS 🎟️",
+            wrongMsg: "Woiii kok bisa salahh, masaa kamuu lupaa !!.",
+            voucherTitle: "RELAXATION ACCESS",
             benefit: "dd berhak mendapatkan layanan pijet dan relaksasi dari mas.",
             terms: [
                 "Berlaku 1x.",
                 "Pake pas ketemu aja ya jelas.",
-                "Kalo mas lagi sakit atau tangannya lagi ga berfungsi dengan baik, bisa dijadwal ulang.",
-                "Jangan expect level spa bintang 5 😌"
+                "Kalo mas lagi sakit atau tangannya lagi ga berfungsi dengan baik, bisa dijadwal ulang."
+    
             ]
         },
         {
             question: "Tempat apa yang kita kunjungi sebelum jadian?",
             options: ["Kopi Kenangan", "Janji Jiwa", "Starbucks", "Lawson"],
             answer: "Kopi Kenangan",
-            wrongMsg: "Yah gagal 😌 Voucher bagus padahal ini.",
-            voucherTitle: "DATE MASTER PASS 🎟️",
+            wrongMsg: "Yah gagal  Voucher bagus padahal ini.",
+            voucherTitle: "DATE MASTER PASS",
             benefit: "Hari ini dd jadi penentu agenda. Mau jalan, makan, nongkrong, atau ngapain, dd yang tentuin.",
             terms: [
                 "Berlaku 1x.",
                 "Menyesuaikan jadwal dan kondisi saat itu.",
+                "Tidak berlaku saat ujian, kuis, remedial, atau ada urusan keluarga penting.",
                 "Tetep harus masuk akal ya 😭",
-                "mas punya hak bertanya \"yakin?\""
+                "menyesuaikan my moneey jugaa yahh babby"
             ]
         },
         {
             question: "Tempat apa yang pertama kali kita rencanakan untuk jalan bareng?",
             options: ["Taman Mini", "Ragunan", "Kota Tua", "Monas"],
             answer: "Ragunan",
-            wrongMsg: "Hmmm 🤔 Kayaknya harus buka chat lama nih.",
-            voucherTitle: "EXCLUSIVE WATCH SESSION 🎟️",
+            wrongMsg: "Hmmm masa kamuu lupa ini kan pertama kali kamu ninja akuu.",
+            voucherTitle: "EXCLUSIVE WATCH SESSION",
             benefit: "dd bebas pilih film atau series. mas wajib nemenin sampe selesai.",
             terms: [
                 "Berlaku 1x.",
@@ -356,14 +359,14 @@
                 "17 September 2024 di Kopi Kenangan"
             ],
             answer: "17 September 2024 di Lawson dekat Kampus E dan H",
-            wrongMsg: "Oke ini agak nyesek 😭 Soalnya aku masih inget detailnya sampai sekarang.",
-            voucherTitle: "PRINCESS DAY ACCESS 🎟️",
+            wrongMsg: "Yaampun masaaa gaa inget pertama kali kita suap suap an!!.",
+            voucherTitle: "PRINCESS DAY ACCESS",
             benefit: "Selama 1 hari penuh, dd naik jabatan jadi bos.",
             terms: [
                 "Berlaku 1x.",
                 "Tidak berlaku saat ujian, kuis, remedial, kegiatan keluarga penting, atau keadaan darurat.",
                 "Penyalahgunaan kekuasaan tidak dianjurkan.",
-                "mas masih punya hak menggunakan logika dalam kondisi tertentu"
+                "mas masih punya hak menggunakan logika dalam kondisi tertentu, untuk mencegah hal hal yang tidak baikk"
             ]
         }
     ];
@@ -472,7 +475,7 @@
             
             // Render isi komponen Tiket Konser utuh di halaman detail
             document.getElementById('detail-voucher-num').innerText = `ACCESS PASS #${currentQuizIndex + 1}`;
-            document.getElementById('detail-voucher-title').innerText = data.voucherTitle.replace(' 🎟️', '');
+            document.getElementById('detail-voucher-title').innerText = data.voucherTitle;
             document.getElementById('detail-benefit').innerText = `> ${data.benefit}`;
             
             // Bikin daftar ketentuan di dalam tiket
@@ -514,7 +517,7 @@
         vouchersLost.forEach(v => {
             listLost.innerHTML += `<li><span style="color: var(--red); margin-right: 10px;">❌</span> ${v.voucherTitle}</li>`;
         });
-        if(vouchersLost.length === 0) listLost.innerHTML = "<li><i>Wah, hebat! Gak ada karcis terlewat 🎉</i></li>";
+        if(vouchersLost.length === 0) listLost.innerHTML = "<li><i>Wah, hebat! Gak ada voucher terlewat 🎉</i></li>";
 
         goToScreen('screen-final');
     }
@@ -523,7 +526,7 @@
     function downloadVoucher() {
         const voucherElement = document.getElementById('voucher-image');
         
-        // Menggunakan library html2canvas untuk menjepret area karcis konser secara utuh
+        // Menggunakan library html2canvas untuk menjepret area voucher konser secara utuh
         html2canvas(voucherElement, { 
             backgroundColor: null, 
             scale: 3, // Bikin resolusi super tajam pas disimpan ke galeri
@@ -535,7 +538,7 @@
             link.download = `Ticket-${cleanTitle}.png`;
             link.href = canvas.toDataURL('image/png');
             link.click();
-            showNotif('Karcis konser berhasil disimpan ke galeri! 🎟️❤️');
+            showNotif('Voucher konser berhasil disimpan ke galeri! 🎟️❤️');
         });
     }
 </script>
